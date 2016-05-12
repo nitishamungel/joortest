@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://staging.joordev.com/" />
+<title>TestCase2_Message-SendAMessage_SelectConnections</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TestCase2_Message-SendAMessage_SelectConnections</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-name</td>
+	<td>qatest1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-pw</td>
+	<td>qatest1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Sign In']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Messages</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Send a Message</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//form[@id='MessageSendForm']/span/div/label[2]</td>
+	<td>Select Connections</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='MessageSendForm']/span/div/label[2]</td>
+	<td>Select Connections</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span.text-3.uppercase &gt; label</td>
+	<td>Subject</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.text-3.uppercase &gt; label</td>
+	<td>Subject</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=MessageSubject</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=MessageSubject</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//form[@id='MessageSendForm']/div[4]/span/label</td>
+	<td>Message</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='MessageSendForm']/div[4]/span/label</td>
+	<td>Message</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=MessageBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=MessageBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.input.file &gt; span.text-3.uppercase &gt; label</td>
+	<td>Attach an image (optional) (.jpg or .png, 4MB max)</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.input.file &gt; span.text-3.uppercase &gt; label</td>
+	<td>Attach an image (optional) (.jpg or .png, 4MB max)</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=MessageAttachmentUpload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=MessageAttachmentUpload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Send</td>
+	<td>Send</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=MessageSendToSelectConnections</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=label.text-3.uppercase</td>
+	<td>Recipient(s) Use the autocomplete to add recipients.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.regularcase.j-message-recipients</td>
+	<td>Use the autocomplete to add recipients.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Your message could not be sent.&nbsp;&nbsp;Please check your recipients list and try again.</td>
+	<td>Your message could not be sent.&nbsp;&nbsp;Please check your recipients list and try again</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=recipient</td>
+	<td>abc</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Your message could not be sent.&nbsp;&nbsp;Please check your recipients list and try again.</td>
+	<td>Your message could not be sent.&nbsp;&nbsp;Please check your recipients list and try again</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=recipient</td>
+	<td>joor ( NMD ) - New York, NY</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=MessageAttachmentUpload</td>
+	<td>C:\Users\nitu\Desktop\QATest(1).pdf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>Unknown file extension</td>
+	<td>Unknown file extension</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=MessageAttachmentUpload</td>
+	<td>C:\Users\nitu\Desktop\joor1.jpg</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Messages</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Send a Message</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=MessageSendToAllConnections</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=MessageAttachmentUpload</td>
+	<td>C:\Users\nitu\Desktop\joor2.png</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Send</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img[alt=&quot;Close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Close&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.designer_dropdown_name</td>
+	<td>Regress Java</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Logout</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
